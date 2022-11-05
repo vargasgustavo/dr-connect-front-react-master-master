@@ -1,26 +1,32 @@
-import React from 'react'
-import '../css/homestyle.css'
-import {Link} from 'react-router-dom'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import Logo from '../images/logo.svg'
 import Doc from '../images/doctor-home.png'
-import Espec from '../images/Especialidades-home.svg'
-import Conv from '../images/Convenio-home.svg'
-import Pro from '../images/Profissionais-home.svg'
+import '../css/homestyle.css'
 
 const HomeMain = () => {
+
+    const [form, setForm] = useState({convenio: '', especialidade: ''})
+    const updateForm = (e) => {
+        setForm({...form, [e.target.name] : e.target.value})
+    }
+
+    const Filtro = async(e) => {
+        
+    }
 
     return (
         <>
             <div class="header">
                 <div class="logo">
-                    <img src={Logo} class="logo"></img>
+                    <img src={Logo} class="logo" alt='Logo'></img>
                 </div>
                 <div class="menu">
                     <nav>
                         <ul>
                             <li><a href="/">Home</a></li>
                             <li><a href="/nossos-servicos">Quem somos?</a></li>
-                            <li><a href="/login">Fazer Login</a></li>   
+                            <li><a href="/login">Fazer Login</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -41,27 +47,27 @@ const HomeMain = () => {
                         <h1>O que gostaria de agendar?</h1>
                     </div>
                     <div className="textfield">
-                        <input type="text" name="usuario" placeholder="Escolha um convênio" />
+                        <input type="text" name="convenio" placeholder="Escolha um convênio" value={form.convenio} onChange={updateForm}/>
                     </div>
                     <div className="textfield">
-                        <input type="password" name="senha" placeholder="Escolha uma especialidade" />
+                        <input type="password" name="especialidade" placeholder="Escolha uma especialidade" value={form.especialidade} onChange={updateForm} />
                     </div>
                     <div className="card-button">
                         <Link to="/busca"><button className="btn-login trasitionButton" onClick={() => {}}>Buscar</button></Link>
                     </div>
                 </div>
             </div>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-                <div className="copy">
-                    <p>Dr. Connect serviços em saúde LTDA / CNPJ 67.465.390/0001-46 /
-                        Endereço: Avenida Pequeri, 383, Jardim América,São Paulo-SP CEP 13222-200
-                    </p>
-                    <span>COPYRIGHT © 2022 TODOS OS DIREITOS RESERVADOS</span>
-                </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <div className="copy">
+                <p>Dr. Connect serviços em saúde LTDA / CNPJ 67.465.390/0001-46 /
+                    Endereço: Avenida Pequeri, 383, Jardim América,São Paulo-SP CEP 13222-200
+                </p>
+                <span>COPYRIGHT © 2022 TODOS OS DIREITOS RESERVADOS</span>
+            </div>
         </>
     )
 }

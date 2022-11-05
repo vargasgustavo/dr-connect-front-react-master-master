@@ -13,7 +13,7 @@ const SobreNos = () => {
         <div>
             <div class="header">
                 <div class="logo">
-                    <img src={Logo} class="logo"></img>
+                    <img src={Logo} class="logo" alt=''></img>
                 </div>
                 <div class="menu">
                     <nav>
@@ -53,7 +53,7 @@ const SobreNos = () => {
                 <div class="footer-body">
                     <div class="our-mission">
                         <div class="image-mission">
-                            <img src={Image4} alt="Doutora nossa missão" />
+                            <img src={Image4} alt="Doutora nossa missão"/>
                         </div>
                         <div class="mission-text-right">
                             <h3>Nossa Missão</h3>

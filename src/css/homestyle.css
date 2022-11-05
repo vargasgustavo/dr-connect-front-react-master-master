@@ -95,7 +95,8 @@ a{
 
 .right-header-body > img{
     border-radius: 50% !important;
-    width: 65% !important;
+    width: 85% !important;
+    margin-right: 100px !important;
 }
 
 .card-body{
@@ -109,7 +110,11 @@ a{
 
 .card-title{
     width: 100% !important;
+    height: 100% !important;
     font-size: 0.85vw !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
 }
 
 .textfield{
