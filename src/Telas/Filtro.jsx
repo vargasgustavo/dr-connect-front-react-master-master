@@ -1,6 +1,8 @@
 import React from 'react'
 import '../css/filtro.css'
 import Logo from '../images/logo.svg'
+import DocOne from '../images/doctor_one.svg'
+import DocTwo from '../images/doctor_two.svg'
 
 const Filtro = () => {
 
@@ -29,7 +31,7 @@ const Filtro = () => {
             <div class="body-body">
                 <div class="doctor-one">
                     <div class="img-one">
-                        <img src="../Imagens/doctor_one.svg" alt="Primeiro médico(a)"/>
+                        <img src={DocOne} alt="Primeiro médico(a)"/>
                     </div>
                     <div class="text-one">
                         <div class="sub">
@@ -50,7 +52,7 @@ const Filtro = () => {
                 </div>
                 <div class="doctor-two">
                     <div class="img-two">
-                        <img src="../Imagens/doctor_two.svg" alt="Segundo médico(a)"/>
+                        <img src={DocTwo} alt="Segundo médico(a)"/>
                     </div>
                     <div class="text-two">
                         <div class="sub">

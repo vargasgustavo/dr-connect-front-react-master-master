@@ -19,6 +19,8 @@ export default function globalReducer (state = initialState, action) {
             return { ...state, selectedProducts: productCopy }
         case "LOGIN":
             return { ...state, loggedIn:true }
+        case "FILTRO":
+            return { ...state,  }
         default:
             return state;
     }
