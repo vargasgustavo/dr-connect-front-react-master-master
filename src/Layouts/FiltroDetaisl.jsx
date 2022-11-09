@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Filtro = () => {
+const FiltroDetails = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const Filtro = () => {
     )
 }
 
-export default Filtro
+export default FiltroDetails
