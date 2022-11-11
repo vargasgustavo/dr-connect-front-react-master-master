@@ -1,4 +1,5 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { Outlet, Routes, Route } from 'react-router-dom';
 import CadastroMain from './Telas/CadastroMain';
 import Header from './Telas/Header';
@@ -12,18 +13,27 @@ import HomeMedico from './Telas/HomeMedico';
 import HomePaciente from './Telas/HomePaciente';
 
 const App = () => {
+
+  const loggedIn = useSelector(state => state.loggedIn);
+
   return (
     <>
       <Routes>
-        <Route path='/' element={<><HomeMain /></>} />
-        <Route path='/login' element={<><Login/></>}/>
+        {loggedIn ?
+        <>
         <Route path='/cadastrar' element={<><CadastroMain /></>} />
         <Route path='/busca' element={<><Filtro/></>}/>
-        <Route path='/nossos-servicos' element={<><SobreNos /></>} />
         <Route path='/agendamento' element={<><Agendamento/></>}/>
         <Route path='/calendar' element={<><Agenda/></>}/>
         <Route path='/home-medico' element={<><HomeMedico/></>}/>
         <Route path='/home-paciente' element={<><HomePaciente/></>}/>
+        </>:
+        <>
+        <Route path='/' element={<><HomeMain /></>} />
+        <Route path='/nossos-servicos' element={<><SobreNos /></>} />
+        <Route path='/login' element={<><Login/></>}/>
+        </>
+        }
       </Routes>
       <Outlet />
     </>
