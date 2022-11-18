@@ -76,7 +76,7 @@ body * {
     display: flex;
     margin-left: 4.9vw;
     max-width: 1500px !important;
-    width: 100%;
+    width: 95%;
     height: 65vh;
     padding: 30px 35px;
     background-image: url(../images/Doctor-sobrenos.svg) !important;
@@ -93,8 +93,12 @@ body * {
     padding-left: 4.2%;
 }
 
-.card-text-left>h1 {
-    font-size: 2.75vw;
+.card-text-left > h1 {
+    font-size: 2.6rem;
+    font-weight: 900;
+    color: #1d1d1d;
+    margin-top: 0;
+    margin-right: 200px;
 }
 
 .card-button-left>button {

@@ -23,7 +23,6 @@ const Modal = (props) => {
                 </Button>
             </Modal.Footer>
         </Modal>
-
     )
 }
 

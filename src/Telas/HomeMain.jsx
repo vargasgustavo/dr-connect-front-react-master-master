@@ -22,9 +22,9 @@ const HomeMain = () => {
 
     return (
         <>
-            <div class="header">
-                <div class="logo">
-                    <img src={Logo} class="logo" alt='Logo'></img>
+            <div className="header">
+                <div className="logo">
+                    <img src={Logo} className="logo" alt='Logo'></img>
                 </div>
                 <div class="menu">
                     <nav>
@@ -55,7 +55,7 @@ const HomeMain = () => {
                         <input type="text" name="convenio" placeholder="Escolha um convênio" value={form.convenio} onChange={updateForm}/>
                     </div>
                     <div className="textfield">
-                        <input type="password" name="especialidade" placeholder="Escolha uma especialidade" value={form.especialidade} onChange={updateForm} />
+                        <input type="text" name="especialidade" placeholder="Escolha uma especialidade" value={form.especialidade} onChange={updateForm} />
                     </div>
                     <div className="card-button">
                         <Link to="/busca"><button className="btn-login trasitionButton" onClick={() => {}}>Buscar</button></Link>
