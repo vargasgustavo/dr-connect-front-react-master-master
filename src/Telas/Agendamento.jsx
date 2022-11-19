@@ -9,22 +9,7 @@ const Agendamento = () => {
     return (
         <div>
             <div class="main">
-                <div class="header">
-                    <div class="logo">
-                        <img src={Logo} class="logo-image"/>
-                    </div>
-                    <div class="menu">
-                        <nav>
-                            <ul>
-                                <li><a href='/agenda'>Agendar</a></li>
-                                <li><a href='/nossos-servicos'>Visão Geral</a></li>
-                                <li><a href='/meuperfil'>Meu Perfil</a></li>
-                                <li><a href='/ajuda'>Ajuda</a></li>
-                                <li><a href='/'>Sair</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
+                
                 <div class="body">
                     <div class="ask">
                         <h1>Deseja agendar uma consulta?</h1>

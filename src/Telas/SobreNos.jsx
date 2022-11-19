@@ -11,20 +11,7 @@ import Image6 from '../images/values-sobrenos.svg'
 const SobreNos = () => {
     return (
         <div>
-            <div class="header">
-                <div class="logo">
-                    <img src={Logo} class="logo" alt=''></img>
-                </div>
-                <div class="menu">
-                    <nav>
-                        <ul>
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/nossos-servicos">Quem somos?</a></li>
-                            <li><a href="/login">Fazer Login</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
+            
             <div class="body">
                 <div class="card-body-main">
                     <div class="card-text-left">

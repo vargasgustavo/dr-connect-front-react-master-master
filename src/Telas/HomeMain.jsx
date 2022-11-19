@@ -22,20 +22,7 @@ const HomeMain = () => {
 
     return (
         <>
-            <div className="header">
-                <div className="logo">
-                    <img src={Logo} className="logo" alt='Logo'></img>
-                </div>
-                <div class="menu">
-                    <nav>
-                        <ul>
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/nossos-servicos">Quem somos?</a></li>
-                            <li><a href="/login">Fazer Login</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
+            
             <div className="body">
                 <div className="header-body">
                     <div className="left-header-body">

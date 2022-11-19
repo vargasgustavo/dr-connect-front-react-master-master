@@ -5,53 +5,39 @@ import '../css/homemedic.css'
 const HomeMedico = () => {
     return (
         <div>
-            <body>
-                <div class="main">
-                    <div class="header">
-                        <div class="logo">
-                            <img src={Logo} class="logo-image" alt=''/>
-                        </div>
-                        <div class="menu">
-                            <nav>
-                                <ul>
-                                    <li><a href='/calendar'>Agendar</a></li>
-                                    <li><a href='/nossos-servicos'>Visão Geral</a></li>
-                                    <li><a>Perfil</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                    <h2 class="sub">Suas Estatísticas</h2>
-                    <div class="body-body">
-                        <div class="main-body">
-                            <div class="card-details">
-                                <div class="agend">
-                                    <p class="agg">Agendamentos</p>
+                <div className="main">
+                   
+                    <h2 className="sub">Suas Estatísticas</h2>
+                    <div className="body-body">
+                        <div className="main-body">
+                            <div className="card-details">
+                                <div className="agend">
+                                    <p className="agg">Agendamentos</p>
                                 </div>
-                                <div class="patients">
-                                    <p class="pat">Pacientes</p>
+                                <div className="patients">
+                                    <p className="pat">Pacientes</p>
                                 </div>
-                                <div class="trat">
-                                    <p class="ment">Tratamentos</p>
+                                <div className="trat">
+                                    <p className="ment">Tratamentos</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="body">
-                        <div class="header-body">
-                            <div class="left-header-body">
+                    <div className="body">
+                        <div className="header-body">
+                            <div className="left-header-body">
 
                             </div>
-                            <div class="right-header-body">
-                                <h2 class="sub-sub">Próximas Consultas</h2>
-                                <div class="main-mini-card">
-                                    <div class="mini-card">
+                            <div className="right-header-body">
+                                <h2 className="sub-sub">Próximas Consultas</h2>
+                                <div className="main-mini-card">
+                                    <div className="mini-card">
                                         <button>Agendamentos para Hoje</button>
                                     </div>
-                                    <div class="mini-card">
+                                    <div className="mini-card">
                                         <button>Agendamentos para Amanhã</button>
                                     </div>
-                                    <div class="mini-card">
+                                    <div className="mini-card">
                                         <button>Todos os Agendamentos</button>
                                     </div>
                                 </div>
@@ -59,7 +45,6 @@ const HomeMedico = () => {
                         </div>
                     </div>
                 </div>
-            </body>
         </div>
     )
 }

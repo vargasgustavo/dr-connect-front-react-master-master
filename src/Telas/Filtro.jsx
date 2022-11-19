@@ -10,24 +10,7 @@ const Filtro = () => {
 
     return (
         <div>
-            <div className="main">
-                <div className="header">
-                    <div className="logo">
-                        <img src={Logo} className="logo-image"/>
-                    </div>
-                    <div className="menu">
-                        <div className="btn-especialidade">
-                            <button className="btn">Especialidade</button>
-                        </div>
-                        <div className="btn-convenio">
-                            <button className="btn">Convênio</button>
-                        </div>
-                        <div className="btn-buscar-especialistas">
-                            <button className="btn">Buscar Especialistas</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           
             <div className="body-body">
                 <div className="doctor-one">
                     <div className="img-one">

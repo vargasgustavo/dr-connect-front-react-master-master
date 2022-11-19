@@ -18,29 +18,39 @@ import Escolha from './Telas/Escolha';
 const App = () => {
 
   const loggedIn = useSelector(state => state.loggedIn);
+  const role = useSelector(state => state.role);
 
   return (
     <>
+      <Header role={role} loggedIn={loggedIn} />
       <Routes>
         {loggedIn ?
-        <>
-        <Route path='/edit-profile-main' element={<><CadastroMain /></>} />
-        <Route path='/edit-profile-patient' element={<><PerfilPaciente/></>} />
-        <Route path='/edit-profile-medic' element={<><PerfilMedico/></>} />
-        <Route path='/busca' element={<><Filtro/></>} />
-        <Route path='/agendamento' element={<><Agendamento/></>} />
-        <Route path='/calendar' element={<><Agenda/></>} />
-        <Route path='/home-medico' element={<><HomeMedico/></>} />
-        <Route path='/home-paciente' element={<><HomePaciente/></>} />
-        <Route path='/choice' element={<><Escolha/></>}/>
-        </>:
-        <>
-        <Route path='/' element={<><HomeMain /></>} />
-        <Route path='/nossos-servicos' element={<><SobreNos /></>} />
-        <Route path='/login' element={<><Login/></>} />
-        </>
+          <>
+
+
+            {role == "ROLE_PATIENT" ?
+              <>
+                <Route path='/agenda' element={<><Agendamento /></>} />
+                <Route path='/busca' element={<><Filtro /></>} />
+                <Route path='/edit-profile' element={<><PerfilPaciente /></>} />
+                <Route path='*' element={<><HomePaciente /></>} />
+              </> :
+              <>
+                <Route path='/agenda' element={<><Agenda /></>} />
+                <Route path='/edit-profile' element={<><PerfilMedico /></>} />
+                <Route path='*' element={<><HomeMedico /></>} />
+              </>
+            }
+          </> :
+          <>
+
+            <Route path='/nossos-servicos' element={<><SobreNos /></>} />
+            <Route path='/login' element={<><Login /></>} />
+            <Route path='*' element={<><HomeMain /></>} />
+          </>
         }
       </Routes>
+      {role}
       <Outlet />
     </>
   )

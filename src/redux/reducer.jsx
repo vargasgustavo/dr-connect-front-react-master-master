@@ -1,7 +1,8 @@
 const initialState = {
     count: 0,
     selectedProducts: [],
-    loggedIn: false
+    loggedIn: false,
+    role: "ROLE_PATIENT"
 };
 
 export default function globalReducer (state = initialState, action) {
@@ -21,6 +22,8 @@ export default function globalReducer (state = initialState, action) {
             return { ...state, loggedIn:true }
         case "FILTRO":
             return { ...state,  }
+        case "ROLE":
+            return { ...state, role: action.role}
         default:
             return state;
     }
