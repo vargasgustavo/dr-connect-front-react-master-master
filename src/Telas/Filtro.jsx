@@ -5,6 +5,9 @@ import DocOne from '../images/doctor_one.svg'
 import DocTwo from '../images/doctor_two.svg'
 
 const Filtro = () => {
+
+    
+
     return (
         <div>
             <div className="main">

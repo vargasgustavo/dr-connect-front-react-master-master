@@ -113,6 +113,7 @@ body * {
 
 .textfield > input::placeholder{
     color: #11B9C4;
+    font-size: 1.1rem !important;
 }
 
 .forget{
@@ -166,7 +167,7 @@ body * {
     }
 
     .textfield input::placeholder{
-        font-size: 1rem;
+        font-size: 1rem !important;
     }
 
 }
@@ -214,8 +215,8 @@ body * {
         width: 30% !important;
     }
 
-    .textfield input::placeholder{
-        font-size: 0.9rem;
+    .textfield input::placeholder {
+        font-size: 0.9rem !important;
     }
 }
 
@@ -230,4 +231,7 @@ body * {
         font-size: 1.4rem !important;
     }
 
+    .textfield input::placeholder {
+        font-size: 0.8rem !important;
+    }
 }

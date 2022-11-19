@@ -14,7 +14,7 @@ const Login = (props) => {
     const responseGoogle = async (response) => {
         console.log(response);
         const tokenId = response.credential;
-        const res = await axiosInstance.post("/login/loginWithGoogle", { tokenId })
+        const res = await axiosInstance.post("/auth/loginWithGoogle", { tokenId })
         const data = await res.data;
         const token = data.token;
         localStorage.setItem("token", token);
@@ -28,7 +28,7 @@ const Login = (props) => {
     }
 
     const signIn = async () => {
-        const res = await axiosInstance.post("/login/signIn", form);
+        const res = await axiosInstance.post("/auth/signIn", form);
         const data = await res.data;
         const token = data.token;
         localStorage.setItem("token", token);
